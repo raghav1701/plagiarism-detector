@@ -12,4 +12,3 @@ var methodOverride = require('method-override');
 var nano = require('nano')('http://localhost:5948');
 var db = nano.use('address')
 
-var app = express;
