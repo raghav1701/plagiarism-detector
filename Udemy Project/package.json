@@ -1,15 +1,18 @@
 {
   "name": "udemy-project",
   "version": "1.0.0",
-  "description": "udemy",
+  "description": "Project",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
   },
-  "author": "Raghav",
+  "author": "Raghav Agrawal",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "express": "^4.17.1",
-    "http": "0.0.1-security"
+    "http": "0.0.1-security",
+    "nodemon": "^2.0.4"
   }
 }
