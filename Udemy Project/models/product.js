@@ -1,24 +1,10 @@
-const fs = require('fs');
-const path = require('path');
+const db = require('../util/database');
 
-const p = path.join(
-  path.dirname(process.mainModule.filename),
-  'data',
-  'products.json'
-);
-
-const getProductsFromFile = cb => {
-  fs.readFile(p, (err, fileContent) => {
-    if (err) {
-      cb([]);
-    } else {
-      cb(JSON.parse(fileContent));
-    }
-  });
-};
+const Cart = require('./cart');
 
 module.exports = class Product {
-  constructor(title, imageUrl, description, price) {
+  constructor(id, title, imageUrl, description, price) {
+    this.id = id;
     this.title = title;
     this.imageUrl = imageUrl;
     this.description = description;
@@ -26,23 +12,18 @@ module.exports = class Product {
   }
 
   save() {
-    this.id = Math.random().toString();
-    getProductsFromFile(products => {
-      products.push(this);
-      fs.writeFile(p, JSON.stringify(products), err => {
-        console.log(err);
-      });
-    });
+   
   }
 
-  static fetchAll(cb) {
-    getProductsFromFile(cb);
+  static deleteById(id) {
+    
   }
 
-  static findById(id, cb) {
-    getProductsFromFile(products => {
-      const product = products.find(p => p.id === id);
-      cb(product);
-    });
+  static fetchAll() {
+    return db.execute('SELECT * FROM products');
+  }
+
+  static findById(id) {
+    
   }
 };
