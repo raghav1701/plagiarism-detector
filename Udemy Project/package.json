@@ -1,5 +1,5 @@
 {
-  "name": "nodejs-complete-guide",
+  "name": "nodejs",
   "version": "1.0.0",
   "description": "Complete Node.js Guide",
   "main": "app.js",
@@ -8,7 +8,7 @@
     "start": "nodemon app.js",
     "start-server": "node app.js"
   },
-  "author": "Maximilian Schwarzmüller",
+  "author": "Raghav",
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^1.18.3"
@@ -18,7 +18,9 @@
     "ejs": "^2.6.1",
     "express": "^4.16.3",
     "express-handlebars": "^3.0.0",
+    "mongodb": "^3.1.6",
     "mysql2": "^1.6.1",
-    "pug": "^2.0.3"
+    "pug": "^2.0.3",
+    "sequelize": "^5.0.0-beta.11"
   }
 }
