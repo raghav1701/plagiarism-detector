@@ -21,7 +21,7 @@ A CLI Application to detect plagiarism in **Source Code Files**.
 - [PlyJ](https://github.com/musiKk/plyj)
 
 ## Prerequisites
-- [Python](https://www.python.org/) (version >= 3.0)
+- [Python](https://www.python.org/) (version >= 3.0)(Recommended = 3.6)
 
 ## Installation
 - Clone this repository.
