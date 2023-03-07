@@ -1,0 +1,6 @@
+typer
+numpy
+pandas
+nltk
+CppHeaderParser
+plyj
