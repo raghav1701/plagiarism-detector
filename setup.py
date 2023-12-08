@@ -13,7 +13,7 @@ if os.path.isfile(path):
 setuptools.setup(
     name='plag-cli',
     version='1.0',
-    author='raghav',
+    author='raghav agrawal',
     description='A CLI application to detect plagiarism in source code files.',
     packages=setuptools.find_packages(),
     install_requires=requirements,
